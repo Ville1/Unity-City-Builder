@@ -1,16 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
-using UnityEngine;
+﻿using System.Diagnostics;
 
 public class Logger {
     private static Logger instance;
 
     private Logger()
-    {
-        
-    }
+    { }
 
     /// <summary>
     /// Accessor for singleton instance
@@ -22,9 +16,6 @@ public class Logger {
                 instance = new Logger();
             }
             return instance;
-        }
-        private set {
-            return;
         }
     }
 

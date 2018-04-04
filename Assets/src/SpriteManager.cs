@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SpriteManager : MonoBehaviour {
@@ -11,7 +10,7 @@ public class SpriteManager : MonoBehaviour {
     /// <summary>
     /// Initialization
     /// </summary>
-    void Start () {
+    private void Start () {
         if (Instance != null) {
             Logger.Instance.Error("Start called multiple times");
         }
@@ -30,6 +29,12 @@ public class SpriteManager : MonoBehaviour {
             sprites.Add("ui_" + texture.name, texture);
         }
     }
+
+    /// <summary>
+    /// Per frame update
+    /// </summary>
+	private void Update()
+    { }
 
     /// <summary>
     /// Get sprite by name

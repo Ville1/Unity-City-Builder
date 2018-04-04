@@ -523,9 +523,6 @@ public class City {
         get {
             return (Time < Grace_Time);
         }
-        private set {
-            return;
-        }
     }
 
     public Building Get_Building(int id)

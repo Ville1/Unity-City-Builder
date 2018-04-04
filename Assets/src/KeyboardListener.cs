@@ -7,9 +7,7 @@ public class KeyboardListener : MonoBehaviour {
 	/// <summary>
     /// Initialization
     /// </summary>
-	private void Start () {
-		
-	}
+	private void Start () { }
 	
 	/// <summary>
     /// Per frame update

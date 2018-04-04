@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -14,6 +13,9 @@ public class MouseListener : MonoBehaviour {
     private Color highlight_connected_color;
     public GameObject Transparent_Building;
 
+    /// <summary>
+    /// Initialization
+    /// </summary>
 	private void Start () {
         if(Instance != null) {
             Logger.Instance.Error("Start called multiple times");
@@ -27,6 +29,9 @@ public class MouseListener : MonoBehaviour {
         highlight_connected_color = new Color(0.1f, 0.1f, 0.5f, 0.5f);
     }
 
+    /// <summary>
+    /// Per frame update
+    /// </summary>
 	private void Update () {
         Vector3 current_position = CameraManager.Instance.Camera.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButton(1) || Input.GetMouseButton(2)) {

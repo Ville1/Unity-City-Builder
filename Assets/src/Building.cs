@@ -278,9 +278,6 @@ public class Building {
             return (Is_Built && !Is_Paused && ((Workers.Count == 0 && Changeable_Workers_PC.Count == 0 && Changeable_Workers_CN.Count == 0)
                 || Get_Worker_Efficiency() > 0.0f));
         }
-        set {
-            return;
-        }
     }
 
     /// <summary>
@@ -331,9 +328,6 @@ public class Building {
     public bool Is_Built {
         get {
             return (Construction_Time_Left <= 0.0f && !deconstruct);
-        }
-        private set {
-            //Abc
         }
     }
 
@@ -824,11 +818,10 @@ public class Building {
         }
     }
 
-    public bool Is_Residential {
+    public bool Is_Residential
+    {
         get {
             return Population_Max != 0;
-        } private set {
-            return;
         }
     }
 
@@ -839,9 +832,6 @@ public class Building {
                 return Upkeep * upkeep_while_paused;
             }
             return Upkeep;
-        }
-        private set {
-            return;
         }
     }
 

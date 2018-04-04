@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -29,7 +28,7 @@ public class StatisticsManager : MonoBehaviour {
     /// <summary>
     /// Initialization
     /// </summary>
-	void Start () {
+	private void Start () {
 		if(Instance != null) {
             Logger.Instance.Error("Start called multiple times");
         }
@@ -41,7 +40,7 @@ public class StatisticsManager : MonoBehaviour {
     /// <summary>
     /// Once per frame
     /// </summary>
-	void Update () {
+	private void Update () {
         if (Panel.activeSelf) {
             time_since_update -= Time.deltaTime;
             if(time_since_update <= 0.0f) {

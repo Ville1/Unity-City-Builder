@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CityManager : MonoBehaviour {
     private static float go_update_intervals = 0.1f; // Seconds
     private static float go_update_cooldown = 0.0f;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
+    /// <summary>
+    /// Initialization
+    /// </summary>
+    private void Start () { }
 	
-	// Update is called once per frame
-	void Update () {
+	/// <summary>
+    /// Per frame update
+    /// </summary>
+	private void Update () {
         if(Game.Instance.State == Game.GameState.RUNNING) {
             City.Instance.Process(Time.deltaTime);
             //Check cooldown
